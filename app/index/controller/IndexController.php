@@ -77,6 +77,12 @@ class IndexController extends Controller {
 //        global $TW_ENV_REQUEST;
 //        return $TW_ENV_REQUEST;
 
-        return url('index/index',['name'=>'xiao']);
+
+//        return think_core_rtrim('/index/index/url.html','.html');
+
+//        return $this->req->getHeaders();
+
+        // 生成网址,支持伪静态处理
+        return url('index/index',['name'=>'xiao'],true,true);
     }
 }

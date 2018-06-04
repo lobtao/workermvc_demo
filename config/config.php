@@ -61,6 +61,7 @@ return [
         'xml_item_key'                 => 'id',
 
         'is_https'                     => false,
+        'url_html_suffix'              => '.html',//URL伪静态后缀
     ],
 
     /**
