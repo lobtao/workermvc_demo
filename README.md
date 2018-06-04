@@ -1,5 +1,7 @@
-workermvc的使用示例代码
+workermvc的使用示例项目代码
 
+workermvc 是一个基于 workerman 的 mvc 框架，使用thinkphp5的composer包,使用习惯
+尽量做到原来的配方、原来的味道，软件运行性能叼到炸
 
 首次运行,执行下面命令,下载最新依赖包
 
