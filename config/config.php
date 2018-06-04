@@ -59,6 +59,8 @@ return [
         'xml_root_attr'                => '',
         'xml_item_node'                => 'item',
         'xml_item_key'                 => 'id',
+
+        'is_https'                     => false,
     ],
 
     /**

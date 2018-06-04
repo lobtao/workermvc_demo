@@ -11,6 +11,7 @@ namespace app\Index\controller;
 use think\Db;
 use think\Template;
 use workermvc\Controller;
+use workermvc\Url;
 
 class IndexController extends Controller {
     function index() {
@@ -62,7 +63,20 @@ class IndexController extends Controller {
         return '目标页面';
     }
 
+    /**
+     * 网址跳转
+     */
     function redirect(){
         $this->resp->redirect('http://127.0.0.1:8080/index/index/dest');
+    }
+
+    function url(){
+        //return Url::build('index/url',['name'=>'xiao']);
+//        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
+//        return $http_type . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+//        global $TW_ENV_REQUEST;
+//        return $TW_ENV_REQUEST;
+
+        return url('index/index',['name'=>'xiao']);
     }
 }
