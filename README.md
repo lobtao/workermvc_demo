@@ -5,7 +5,12 @@ workermvc 是一个基于 workerman 的 mvc 框架，使用thinkphp5的composer�
 
 首次运行,执行下面命令,下载最新依赖包
 
-composer install
+1. composer install
+
+2. php start.php start
+
+
+
 
 机器配置mac pro 2017,i5cpu,8G内存
 
