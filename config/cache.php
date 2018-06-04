@@ -1,13 +1,12 @@
 <?php
 /**
- *  ThinkWorker - THINK AND WORK FAST
- *  Copyright (c) 2017 http://thinkworker.cn All Rights Reserved.
- *  Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
- *  Author: Dizy <derzart@gmail.com>
+ * Created by lobtao.
+ * Date: 2018/5/25
+ * Time: 下午10:44
  */
 
 /**
- *  Redis Settings
+ *  Redis 配置
  */
 return [
     // 驱动方式（支持file/memcache/redis/xcache/wincache/sqlite）

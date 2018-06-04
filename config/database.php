@@ -1,14 +1,12 @@
 <?php
 /**
- *  ThinkWorker - THINK AND WORK FAST
- *  Copyright (c) 2017 http://thinkworker.cn All Rights Reserved.
- *  Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
- *  Author: Dizy <derzart@gmail.com>
+ * Created by lobtao.
+ * Date: 2018/5/25
+ * Time: 下午10:44
  */
 
-
 /**
- *  Database Settings
+ *  Database 配置
  */
 return [
     // 数据库类型

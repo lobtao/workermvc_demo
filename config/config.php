@@ -1,21 +1,20 @@
 <?php
 /**
- *  ThinkWorker - THINK AND WORK FAST
- *  Copyright (c) 2017 http://thinkworker.cn All Rights Reserved.
- *  Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
- *  Author: Dizy <derzart@gmail.com>
+ * Created by lobtao.
+ * Date: 2018/5/25
+ * Time: 下午10:44
  */
 
 return [
 
     /**
-     *  Workerman Engine Settings
+     *  Workerman 配置
      */
     'worker'   => [
         'protocol'            => 'http',
         'hostname'            => '0.0.0.0',
         'hostport'            => 8080,
-        'count'               => 8,
+        'count'               => 4,
         'name'                => 'WorkerMVC',
 
 //        'ssl'                 => false,
@@ -36,7 +35,7 @@ return [
     ],
 
     /**
-     *  ThinkWorker Basic Settings
+     *  WorkerMVC框架基本配置
      */
     'think'    => [
         'debug'                        => true,//显示详细错误信息
@@ -63,7 +62,7 @@ return [
     ],
 
     /**
-     *  Template Engine Settings
+     *  Think 模板引擎配置
      */
     'template' => [
         'view_path'          => '', // 模板路径
@@ -97,7 +96,7 @@ return [
     ],
 
     /**
-     *  Cookie Settings
+     *  Cookie 配置
      */
     'cookie'   => [
         'prefix'   => '',
@@ -109,7 +108,7 @@ return [
     ],
 
     /**
-     *  Session Settings
+     *  Session 配置
      */
     'session'  => [
         'driver'     => 'file',
@@ -118,7 +117,7 @@ return [
     ],
 
     /**
-     *  Log Settings
+     *  Log 配置
      */
     'log'      => [
         // 日志记录方式，内置 file socket 支持扩展

@@ -9,9 +9,10 @@ namespace app\index\controller;
 
 
 class CacheController {
-    function index(){
+    function index() {
         return 'cache.index';
     }
+
     function set() {
         return \think\Cache::set('name', '哈哈');
     }

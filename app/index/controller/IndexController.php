@@ -14,7 +14,7 @@ use workermvc\Controller;
 
 class IndexController extends Controller {
     function index() {
-        return 'index1';
+        return 'hello world';
     }
 
     function test() {
@@ -45,12 +45,24 @@ class IndexController extends Controller {
         ]);
     }
 
-    function config(){
+    function config() {
         return config();
     }
 
-    function bigData(){
+    function bigData() {
 
         return 'bigData' . date('Y-m-d H:i:s', time());
+    }
+
+    function calc(){
+        return 1&2&4*6;
+    }
+
+    function dest(){
+        return '目标页面';
+    }
+
+    function redirect(){
+        $this->resp->redirect('http://127.0.0.1:8080/index/index/dest');
     }
 }
