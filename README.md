@@ -5,7 +5,7 @@ workermvc的使用示例代码
 
 composer install
 
-ab性能测试
+ab性能测试单表数据库查询(mac pro 2017,i5cpu,8G内存)
 
 ab -c10 -n1000 -k http://127.0.0.1:8080/index/index/db
 
