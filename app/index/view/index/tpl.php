@@ -17,6 +17,13 @@ var_dump($data);
 ?>
 哈哈
 <hr>
-{//$data|JSON}
+{$data|JSON}
 <?=$name;?>
+
+<script>
+    $(function(){
+        console.log('hello')
+    })
+</script>
+
 {/block}

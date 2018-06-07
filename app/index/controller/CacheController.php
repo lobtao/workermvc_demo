@@ -9,6 +9,7 @@ namespace app\index\controller;
 
 
 class CacheController {
+
     function index() {
         return 'cache.index';
     }

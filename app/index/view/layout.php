@@ -11,6 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{block name="title"}测试{/block}</title>
+
+    <script src="/static/jquery.js"></script>
 </head>
 <body>
 {block name="body"}{/block}

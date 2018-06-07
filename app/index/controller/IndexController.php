@@ -8,14 +8,21 @@
 namespace app\Index\controller;
 
 
+use app\service\TestService;
 use think\Db;
 use think\Template;
 use workermvc\Controller;
 use workermvc\Url;
 
 class IndexController extends Controller {
+
     function index() {
-        return 'hello world';
+//        TestService::$iCount++;
+//        return TestService::$iCount;
+
+
+//        return $this->req->get('name');
+        return 'hello world1';
     }
 
     function test() {
@@ -55,22 +62,22 @@ class IndexController extends Controller {
         return 'bigData' . date('Y-m-d H:i:s', time());
     }
 
-    function calc(){
-        return 1&2&4*6;
+    function calc() {
+        return 1 & 2 & 4 * 6;
     }
 
-    function dest(){
+    function dest() {
         return '目标页面';
     }
 
     /**
      * 网址跳转
      */
-    function redirect(){
+    function redirect() {
         $this->resp->redirect('http://127.0.0.1:8080/index/index/dest');
     }
 
-    function url(){
+    function url() {
         //return Url::build('index/url',['name'=>'xiao']);
 //        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
 //        return $http_type . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -83,6 +90,6 @@ class IndexController extends Controller {
 //        return $this->req->getHeaders();
 
         // 生成网址,支持伪静态处理
-        return url('index/index',['name'=>'xiao'],true,true);
+        return url('index@index/index', ['name' => 'xiao'], true, true);
     }
 }
