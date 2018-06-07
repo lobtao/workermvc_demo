@@ -7,25 +7,27 @@
 
 namespace app\Index\controller;
 
-
-use app\service\TestService;
 use think\Db;
 use think\Template;
 use workermvc\Controller;
-use workermvc\Url;
 
 class IndexController extends Controller {
 
     function index() {
-//        TestService::$iCount++;
-//        return TestService::$iCount;
-
-
-//        return $this->req->get('name');
         return 'hello world1';
     }
 
+    function input() {
+        return $this->request->getMethod();
+        // input 获取参数值
+        return input('?get.name', 'test');
+
+        // 通过request获取参数值
+        return $this->request->get('name', 'test');
+    }
+
     function test() {
+
         return 'test1';
     }
 
@@ -74,7 +76,7 @@ class IndexController extends Controller {
      * 网址跳转
      */
     function redirect() {
-        $this->resp->redirect('http://127.0.0.1:8080/index/index/dest');
+        $this->response->redirect('http://127.0.0.1:8080/index/index/dest');
     }
 
     function url() {
