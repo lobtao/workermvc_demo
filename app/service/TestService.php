@@ -7,13 +7,12 @@
 
 namespace app\service;
 
-
 class TestService {
 
     static $iCount = 1;
 
     static function test() {
-        return 'test1';
+        return 'test 方法被调用了';
     }
 
     function index() {

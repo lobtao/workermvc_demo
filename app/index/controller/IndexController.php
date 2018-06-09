@@ -19,6 +19,7 @@ class IndexController extends Controller {
 
     function input() {
         return $this->request->getMethod();
+
         // input 获取参数值
         return input('?get.name', 'test');
 
@@ -41,6 +42,7 @@ class IndexController extends Controller {
 
     function db() {
         $data = Db::query('select * from tb_test');
+
         return $data;
     }
 
@@ -50,6 +52,7 @@ class IndexController extends Controller {
 
     function tpl() {
         $data = Db::query('select * from tb_test');
+
         return $this->fetch('index@index/tpl', [
             'data' => $data,
         ]);
@@ -81,15 +84,15 @@ class IndexController extends Controller {
 
     function url() {
         //return Url::build('index/url',['name'=>'xiao']);
-//        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
-//        return $http_type . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-//        global $TW_ENV_REQUEST;
-//        return $TW_ENV_REQUEST;
+        //        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
+        //        return $http_type . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        //        global $TW_ENV_REQUEST;
+        //        return $TW_ENV_REQUEST;
 
 
-//        return think_core_rtrim('/index/index/url.html','.html');
+        //        return think_core_rtrim('/index/index/url.html','.html');
 
-//        return $this->req->getHeaders();
+        //        return $this->req->getHeaders();
 
         // 生成网址,支持伪静态处理
         return url('index@index/index', ['name' => 'xiao'], true, true);

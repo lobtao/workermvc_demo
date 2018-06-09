@@ -8,7 +8,7 @@
 return [
 
     /**
-     *  Workerman 配置
+     *  Workerman 配置. 该配置不能动态加载, 其它配置可以动态加载
      */
     'worker'   => [
         'protocol'            => 'http',
@@ -31,6 +31,7 @@ return [
          */
         'debug_dirs'          => [
             APP_PATH,
+            APP_PATH . '../config/',
         ],
     ],
 
@@ -124,12 +125,12 @@ return [
      */
     'log'      => [
         // 日志记录方式，内置 file socket 支持扩展
-        'type'             => 'socket',
-        'host'             => 'yssoft.cn',
+        'type'             => 'file',
+        'host'             => '',
         //日志强制记录到配置的client_id
-        'force_client_ids' => ['xt'],
+        'force_client_ids' => [],
         //限制允许读取日志的client_id
-        'allow_client_ids' => ['xt'],
+        'allow_client_ids' => [],
         // 日志保存目录
         'path'             => LOG_PATH,
         // 日志记录级别

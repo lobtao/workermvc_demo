@@ -9,7 +9,7 @@
  *  Redis 配置
  */
 return [
-    // 驱动方式（支持file/memcache/redis/xcache/wincache/sqlite）
+    // 驱动方式（支持 file/memcache/redis/xcache/wincache/sqlite）
     'type'       => 'file',
     // 缓存保存目录
     'path'       => CACHE_PATH,
