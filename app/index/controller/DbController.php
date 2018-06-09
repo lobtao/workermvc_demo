@@ -25,7 +25,10 @@ class DbController {
      * @return string
      */
     function insert() {
-        return Db::name('')->insert([]);
+        return Db::name('test')->insert([
+            'fname' => 'WorkerMVC ' . time(),
+            'ftime' => date('Y-m-d H:i:s', time()),
+        ]);
     }
 
     /**
