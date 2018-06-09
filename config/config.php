@@ -17,10 +17,10 @@ return [
         'count'               => 4,
         'name'                => 'WorkerMVC',
 
-//        'ssl'                 => false,
-//        'ssl_local_cert'      => '/etc/nginx/conf.d/ssl/server.pem',
-//        'ssl_local_pk'        => '/etc/nginx/conf.d/ssl/server.key',
-//        'ssl_verify_peer'     => false,
+        //        'ssl'                 => false,
+        //        'ssl_local_cert'      => '/etc/nginx/conf.d/ssl/server.pem',
+        //        'ssl_local_pk'        => '/etc/nginx/conf.d/ssl/server.key',
+        //        'ssl_verify_peer'     => false,
 
         'max_request_restart' => true,
         'max_request_limit'   => 1000,
@@ -120,20 +120,4 @@ return [
         'prefix'     => '',
     ],
 
-    /**
-     *  Log 配置
-     */
-    'log'      => [
-        // 日志记录方式，内置 file socket 支持扩展
-        'type'             => 'file',
-        'host'             => '',
-        //日志强制记录到配置的client_id
-        'force_client_ids' => [],
-        //限制允许读取日志的client_id
-        'allow_client_ids' => [],
-        // 日志保存目录
-        'path'             => LOG_PATH,
-        // 日志记录级别
-        'level'            => ['error'],
-    ],
 ];
