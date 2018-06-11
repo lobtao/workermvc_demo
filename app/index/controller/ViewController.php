@@ -35,4 +35,14 @@ class ViewController extends Controller{
             'data' => $data,
         ]);
     }
+
+    function view(){
+        $data = cache('data');
+        if (empty($data)) {
+            echo '查询一次 '.PHP_EOL;
+            $data = Db::name('test')->select();
+            cache('data', $data);
+        }
+        return $this->fetch('view/view',['data'=>$data]);
+    }
 }

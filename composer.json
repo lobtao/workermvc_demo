@@ -1,6 +1,7 @@
 {
     "require": {
-        "lobtao/workermvc": "^1.0"
+        "lobtao/workermvc": "^1.0",
+        "lobtao/tp5helper": "^0.2.12"
     },
     "autoload": {
         "psr-4": {

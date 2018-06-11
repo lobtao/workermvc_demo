@@ -9,6 +9,7 @@
 namespace app\index\controller;
 
 
+use think\Cache;
 use think\Db;
 
 class DbController {
@@ -59,7 +60,21 @@ class DbController {
      * @return array|\PDOStatement|string|\think\Collection
      */
     function select() {
-        return Db::name('test')->select();
+//        $data = Cache::get('data');
+//        if (empty($data)) {
+//            echo '查询一次 '.PHP_EOL;
+//            $data = Db::name('test')->select();
+//            Cache::set('data', $data);
+//        }
+
+        $data = cache('data');
+        if (empty($data)) {
+            echo '查询一次 '.PHP_EOL;
+            $data = Db::name('test')->select();
+            cache('data', $data);
+        }
+
+        return $data?:'';
     }
 
     /**
