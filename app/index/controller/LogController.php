@@ -1,5 +1,6 @@
 <?php
 /**
+ * 日志记录示例
  * Created by lobtao.
  * Date: 2018/6/10
  * Time: 上午1:06

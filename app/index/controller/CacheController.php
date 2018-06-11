@@ -1,5 +1,6 @@
 <?php
 /**
+ * Cache操作示例
  * Created by lobtao.
  * Date: 2018/5/29
  * Time: 上午12:05

@@ -9,4 +9,3 @@ CREATE TABLE tb_test
 INSERT INTO test.tb_test (fid, fname, ftime) VALUES (1, '肖滔', NULL);
 INSERT INTO test.tb_test (fid, fname, ftime) VALUES (2, 'lobtao', '2018-04-24 15:23:39');
 INSERT INTO test.tb_test (fid, fname, ftime) VALUES (3, 'emily', '2018-04-24 15:23:39');
-INSERT INTO test.tb_test (fid, fname, ftime) VALUES (4, '刘芳', NULL);

@@ -5,7 +5,7 @@
  * Time: 下午10:44
  */
 
-namespace app\Index\controller;
+namespace app\index\controller;
 
 use think\Db;
 use think\Template;
@@ -14,10 +14,16 @@ use workermvc\Controller;
 class IndexController extends Controller {
 
     function index() {
-        return 'hello world1';
+        return 'hello WorkerMvc';
     }
 
+    /**
+     * 获取参数示例
+     * @return mixed
+     */
     function input() {
+        return input('get.name', 'test');
+
         return $this->request->getMethod();
 
         // input 获取参数值
@@ -25,54 +31,6 @@ class IndexController extends Controller {
 
         // 通过request获取参数值
         return $this->request->get('name', 'test');
-    }
-
-    function test() {
-
-        return 'test1';
-    }
-
-    function set() {
-        return session('name', 'test');
-    }
-
-    function get() {
-        return session('name');
-    }
-
-    function db() {
-        $data = Db::query('select * from tb_test');
-
-        return $data;
-    }
-
-    function files() {
-        return count(get_included_files());
-    }
-
-    function tpl() {
-        $data = Db::query('select * from tb_test');
-
-        return $this->fetch('index@index/tpl', [
-            'data' => $data,
-        ]);
-    }
-
-    function config() {
-        return config();
-    }
-
-    function bigData() {
-
-        return 'bigData' . date('Y-m-d H:i:s', time());
-    }
-
-    function calc() {
-        return 1 & 2 & 4 * 6;
-    }
-
-    function dest() {
-        return '目标页面';
     }
 
     /**
@@ -83,17 +41,6 @@ class IndexController extends Controller {
     }
 
     function url() {
-        //return Url::build('index/url',['name'=>'xiao']);
-        //        $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
-        //        return $http_type . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        //        global $TW_ENV_REQUEST;
-        //        return $TW_ENV_REQUEST;
-
-
-        //        return think_core_rtrim('/index/index/url.html','.html');
-
-        //        return $this->req->getHeaders();
-
         // 生成网址,支持伪静态处理
         return url('index@index/index', ['name' => 'xiao'], true, true);
     }

@@ -1,5 +1,6 @@
 <?php
 /**
+ * Session操作示例
  * Created by lobtao.
  * Date: 2018/6/10
  * Time: 上午12:32
